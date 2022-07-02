@@ -1,4 +1,4 @@
-import './employees-list-item.css';
+import './employees-list-item.scss';
 
 const EmployeesListItem = (props) => {
         const {name, salary, onDelete, onPropToggle, forPromotion, isLiked} = props;
@@ -13,7 +13,10 @@ const EmployeesListItem = (props) => {
 
         return (
             <li className={classNames}>
-                <span className="list-group-item-label" onClick={onPropToggle} data-toggle="isLiked">{name}</span>
+                <span tabIndex={0} 
+                className="list-group-item-label" 
+                onClick={onPropToggle} 
+                data-toggle="isLiked">{name}</span>
                 <input type="text" className="list-group-item-input" defaultValue={salary + '$'}/>
                 <div className='d-flex justify-content-center align-items-center'>
                     <button type="button"
